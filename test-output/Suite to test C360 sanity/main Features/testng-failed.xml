@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite to test C360 sanity/main Features]">
+  <test thread-count="5" name="Validating very Important features(failed)">
+    <classes>
+      <class name="com.qa.tests.LoginPageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="signTest"/>
+        </methods>
+      </class> <!-- com.qa.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- Validating very Important features(failed) -->
+</suite> <!-- Failed suite [Suite to test C360 sanity/main Features] -->

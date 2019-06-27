@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite to test C360 sanity/main Features" duration-ms="117954" started-at="2019-06-27T06:58:31Z" finished-at="2019-06-27T07:00:29Z">
+    <groups>
+    </groups>
+    <test name="Validating very Important features" duration-ms="117954" started-at="2019-06-27T06:58:31Z" finished-at="2019-06-27T07:00:29Z">
+      <class name="com.qa.tests.AdminDashboardPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.tests.AdminDashboardPageTest@1f021e6c]" name="setup" is-config="true" duration-ms="25708" started-at="2019-06-27T06:58:58Z" finished-at="2019-06-27T06:59:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loggedUserNameTest()[pri:1, instance:com.qa.tests.AdminDashboardPageTest@1f021e6c]" name="loggedUserNameTest" duration-ms="1161" started-at="2019-06-27T06:59:24Z" finished-at="2019-06-27T06:59:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loggedUserNameTest -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.tests.AdminDashboardPageTest@1f021e6c]" name="setup" is-config="true" duration-ms="26251" started-at="2019-06-27T07:00:02Z" finished-at="2019-06-27T07:00:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="impersonateTest()[pri:2, instance:com.qa.tests.AdminDashboardPageTest@1f021e6c]" name="impersonateTest" duration-ms="970" started-at="2019-06-27T07:00:28Z" finished-at="2019-06-27T07:00:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- impersonateTest -->
+      </class> <!-- com.qa.tests.AdminDashboardPageTest -->
+      <class name="com.qa.tests.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.tests.LoginPageTest@35a50a4c]" name="setup" is-config="true" duration-ms="25032" started-at="2019-06-27T06:58:31Z" finished-at="2019-06-27T06:58:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.qa.tests.LoginPageTest@35a50a4c]" name="loginPageTitleTest" duration-ms="29" started-at="2019-06-27T06:58:56Z" finished-at="2019-06-27T06:58:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTitleTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.tests.LoginPageTest@35a50a4c]" name="teardown" is-config="true" duration-ms="2067" started-at="2019-06-27T06:58:56Z" finished-at="2019-06-27T06:58:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.tests.LoginPageTest@35a50a4c]" name="setup" is-config="true" duration-ms="26170" started-at="2019-06-27T06:59:25Z" finished-at="2019-06-27T06:59:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signTest()[pri:2, instance:com.qa.tests.LoginPageTest@35a50a4c]" name="signTest" duration-ms="7962" started-at="2019-06-27T06:59:51Z" finished-at="2019-06-27T06:59:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.tests.LoginPageTest@35a50a4c]" name="teardown" is-config="true" duration-ms="2543" started-at="2019-06-27T06:59:59Z" finished-at="2019-06-27T07:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.qa.tests.LoginPageTest -->
+    </test> <!-- Validating very Important features -->
+  </suite> <!-- Suite to test C360 sanity/main Features -->
+</testng-results>
