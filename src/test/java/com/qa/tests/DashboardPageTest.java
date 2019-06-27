@@ -27,7 +27,24 @@ public class DashboardPageTest extends TestBase {
 		AdminDashboardPageObj=loginPageObject.SignIn(prop.getProperty("username"), prop.getProperty("password"));
 		dashboardPageObj=AdminDashboardPageObj.Impersonate();
 	}
+	
+	@Test
+	public void dashboardPageTitleTest()
+	{
+		String currentTitle=dashboardPageObj.dashboardPageTitle();
+		Assert.assertEquals(currentTitle, "Collateral360");
+	}
+	
+	@Test
+	public void logoTest()
+	{
+		Assert.assertTrue(dashboardPageObj.logoTest);
+	}
 
-
+	@AfterMethod
+	public void teardown()
+	{
+		driver.quit();	
+	}
 
 }
