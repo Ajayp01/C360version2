@@ -20,7 +20,7 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	
-	
+	//constructor to configure properties files
 	public TestBase() {
 		
 		InputStream is = null;
