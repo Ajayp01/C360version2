@@ -40,6 +40,13 @@ public class DashboardPageTest extends TestBase {
 	{
 		Assert.assertTrue(dashboardPageObj.logoTest);
 	}
+	
+	
+	@Test
+	public void clickOnCreateRequestButtonTest()
+	{
+	
+	}
 
 	@AfterMethod
 	public void teardown()
