@@ -16,7 +16,7 @@ import com.qa.util.TestUtil;
 
 public class TestBase {
 	
-	
+	//defining static variables so that u no need to create object to access it in child classes
 	public static WebDriver driver;
 	public static Properties prop;
 	
