@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.AdminDashboardPageTest">
+      <class name="com.qa.tests.DashboardPageTest">
         <methods>
-          <include name="loggedUserNameTest"/>
+          <include name="logoTest"/>
+          <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.tests.AdminDashboardPageTest -->
+      </class> <!-- com.qa.tests.DashboardPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

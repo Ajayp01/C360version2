@@ -3,6 +3,7 @@ package com.qa.tests;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,9 +15,9 @@ import com.qa.pages.LoginPage;
 
 public class AdminDashboardPageTest extends TestBase{
 
-	public AdminDashboardPage AdmindashboardPageObj;
-	public DashboardPage DashboardPageObj;
-	public LoginPage LoginPageObj;
+	 AdminDashboardPage adminDashboardPageObj;
+	 DashboardPage dashboardPageObj;
+	 LoginPage loginPageObj;
 	
 	public AdminDashboardPageTest() throws IOException {
 		super();
@@ -26,25 +27,27 @@ public class AdminDashboardPageTest extends TestBase{
 	public void setup() throws IOException, InterruptedException
 	{
 		initialization();
-	    AdmindashboardPageObj=LoginPageObj.SignIn(prop.getProperty("username"), prop.getProperty("password"));
+		loginPageObj=new LoginPage();
+	    adminDashboardPageObj=loginPageObj.SignIn(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	@Test(priority=1)
 	public void loggedUserNameTest()
 	{
-		String UserName=AdmindashboardPageObj.validateLoggedUserName();
+		String UserName=adminDashboardPageObj.validateLoggedUserName();
 		Assert.assertEquals(UserName, "AJAY", "User name did not match");
 	}
 	
 	@Test(priority=2)
 	public void impersonateTest() throws IOException, InterruptedException
 	{
-		DashboardPageObj=AdmindashboardPageObj.Impersonate();
+		dashboardPageObj=adminDashboardPageObj.Impersonate();
 	} 
 	
 	@AfterMethod
-	public void teardown()
+	public void teardown(ITestResult result)
 	{
+		System.out.println("Passed  " + result.getMethod().getMethodName());
 		driver.quit();
 	}
 	

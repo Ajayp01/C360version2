@@ -2,7 +2,11 @@ package com.qa.tests;
 
 import java.io.IOException;
 
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
 import com.qa.pages.AdminDashboardPage;
@@ -12,46 +16,49 @@ import com.qa.pages.LoginPage;
 public class DashboardPageTest extends TestBase {
 
 	
-	LoginPage loginPageObject;
-	AdminDashboardPage AdminDashboardPageObj;
-	DashboardPage dashboardPageObj;
+	 LoginPage loginPageObj;
+	 AdminDashboardPage adminDashboardPageObj;
+	 DashboardPage dashboardPageObj;
 	
 	public DashboardPageTest() {
 		super();
 	}
 
 	@BeforeMethod
-	public void setupt() throws IOException, InterruptedException
+	public void setup() throws IOException, InterruptedException
 	{
 		initialization();
-		AdminDashboardPageObj=loginPageObject.SignIn(prop.getProperty("username"), prop.getProperty("password"));
-		dashboardPageObj=AdminDashboardPageObj.Impersonate();
+		loginPageObj=new LoginPage();
+		adminDashboardPageObj=loginPageObj.SignIn(prop.getProperty("username"), prop.getProperty("password"));
+		dashboardPageObj=adminDashboardPageObj.Impersonate();
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void dashboardPageTitleTest()
 	{
 		String currentTitle=dashboardPageObj.dashboardPageTitle();
 		Assert.assertEquals(currentTitle, "Collateral360");
 	}
 	
-	@Test
-	public void logoTest()
+	@Test(priority=2)
+	public void logoTest() throws InterruptedException
 	{
-		Assert.assertTrue(dashboardPageObj.logoTest);
+		boolean currentLogo=dashboardPageObj.logo();
+		Assert.assertTrue(currentLogo, "Logo not displayed");
 	}
 	
 	
-	@Test
+	@Test(priority=3)
 	public void clickOnCreateRequestButtonTest()
 	{
-	
+		boolean IsButtonAvailable=dashboardPageObj.clickOnCreateRequestButton();
+		Assert.assertTrue(IsButtonAvailable, "Create Request Button is not available");
 	}
 
 	@AfterMethod
-	public void teardown()
+	public void teardown(ITestResult result)
 	{
-		driver.quit();	
+		System.out.println("Passed  " + result.getMethod().getMethodName());
+		driver.quit();
 	}
-
 }

@@ -24,6 +24,9 @@ public class AdminDashboardPage extends TestBase {
 	
 	public String validateLoggedUserName()
 	{
+		
+		WebDriverWait wait = new WebDriverWait(driver, 25);
+		wait.until(ExpectedConditions.titleContains("Collateral360"));
 		return LoggedUser.getText();
 	}
 	

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite to test C360 regression Features]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite to test C360 regression Features]">
   <test thread-count="5" name="Regression1(failed)">
     <classes>
-      <class name="com.qa.tests.LoginPageTest">
+      <class name="com.qa.tests.DashboardPageTest">
         <methods>
+          <include name="logoTest"/>
+          <include name="clickOnCreateRequestButtonTest"/>
+          <include name="teardown"/>
+          <include name="dashboardPageTitleTest"/>
           <include name="setup"/>
-          <include name="signTest"/>
-          <include name="loginPageTitleTest"/>
         </methods>
-      </class> <!-- com.qa.tests.LoginPageTest -->
+      </class> <!-- com.qa.tests.DashboardPageTest -->
     </classes>
   </test> <!-- Regression1(failed) -->
 </suite> <!-- Failed suite [Suite to test C360 regression Features] -->

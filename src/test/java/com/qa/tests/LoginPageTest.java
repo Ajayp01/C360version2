@@ -3,6 +3,7 @@ package com.qa.tests;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,7 +24,7 @@ public class LoginPageTest extends TestBase{
 	
 	
 	@BeforeMethod
-	public void setup() throws IOException
+	public void setup() throws IOException, InterruptedException
 	{
 		initialization();
 		loginPageObj=new LoginPage();
@@ -43,11 +44,10 @@ public class LoginPageTest extends TestBase{
  	}
 	
 	@AfterMethod
-	public void teardown()
+	public void teardown(ITestResult result)
 	{
+		System.out.println(" Passed: "  + result.getMethod().getMethodName());
 		driver.quit();
-		
 	}
-	
 
 }

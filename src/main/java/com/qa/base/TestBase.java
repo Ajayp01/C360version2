@@ -36,7 +36,7 @@ public class TestBase {
 				e.printStackTrace();}
 		}
 	
-	public static void initialization() 
+	public static void initialization() throws InterruptedException 
 	{
 		String BrowserName=prop.getProperty("browser");
 		
@@ -59,8 +59,8 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
-		
 		driver.get(prop.getProperty("url"));
+		Thread.sleep(4000);
 		
 	}
 	
