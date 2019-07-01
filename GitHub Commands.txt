@@ -1,0 +1,40 @@
+1.Create a branch on https://github.com/Ajayp01/C360Automation
+
+Steps to create branch:==
+[ Just write name of branch e.g SRFpage and hit enter]
+
+==============================================================================
+
+2.git branch==This will show on which branch currently ur in =>i.e master/SRFpage
+
+==============================================================================
+
+Now if you want to Switch branch from master to SRFpage 
+
+3.git checkout SRFpage
+
+==============================================================================
+
+Now if you want to Switch branch from SRFpage to master
+
+3.git checkout master
+
+===============================================================================
+
+Change will be appeared in eclipse code as per thew branch switched
+
+*Now git status
+*git add . =>All files 
+*git add 
+*git commit -m "added code"
+*git push=>this will push the code to the current branch ur in i.e master/SRFpage
+*git push origin master=>this will push the code to the master branch
+*git push origin SRFpage=>this will push the code to the SRFpage branch
+
+=================================================================================
+
+If you want to pull the chnages 
+
+*git pull=>copy whatever changes on master to local 
+
+*git fetch origin SRFpage =>fetch code from SRFpage branch not the master
