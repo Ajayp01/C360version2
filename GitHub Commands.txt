@@ -38,3 +38,12 @@ If you want to pull the chnages
 *git pull=>copy whatever changes on master to local 
 
 *git fetch origin SRFpage =>fetch code from SRFpage branch not the master
+
+=================================================================================
+
+To merge branch
+
+*Click on New pull request
+*Select what branch u want to merge and in which branch u want to merge
+*Click on Create pull request
+*merge branch
